@@ -22,6 +22,7 @@ body {
 }
 
 .buttons{
+    padding-top: 20px;
   display:grid;
   grid-template-columns: repeat(5,60px);
   gap:10px;
@@ -31,7 +32,7 @@ button{
   height:55px;
   font-size:18px;
   border:none;
-  border-radius:20px;
+  border-radius:10px;
   background:#334155;
   color:white;
   cursor:pointer;

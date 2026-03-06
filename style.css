@@ -1,3 +1,19 @@
+body{
+  background:#0f172a;
+}
+
+body.light{
+  background:#f1f5f9;
+}
+
+.calculator{
+  background:#1e293b;
+}
+
+body.light .calculator{
+  background:#e2e8f0;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -29,8 +45,8 @@ body {
 }
 
 button{
-  height:55px;
-  font-size:18px;
+  height:40px;
+  font-size:15px;
   border:none;
   border-radius:10px;
   background:#334155;
@@ -38,10 +54,54 @@ button{
   cursor:pointer;
   transition:0.2s;
 }
-button:hover{
-  background:#475569;
+/* Numbers text */
+button.number{
+  color: #60a5fa;  /* soft blue */
 }
 
+/* Operators text */
+button.operator{
+  color: #f59e0b;  /* soft orange */
+}
+
+/* Scientific text */
+button.scientific{
+  color: #10b981;  /* soft green */
+}
+
+/* Hover effect */
+button:hover{
+  filter: brightness(1.15);
+}
+
+/* Active effect */
 button:active{
-  transform:scale(0.95);
+  transform: scale(0.95);
+}
+button#MR.active{
+  background:#10b981;  /* green if memory > 0 */
+}
+
+#history{
+  background:#1e293b;
+  color:#f9fafb;
+  padding:10px;
+  border-radius:10px;
+  margin-bottom:10px;
+  max-height:150px;
+  overflow-y:auto;
+  font-size:14px;
+}
+
+#history div{
+  padding:4px;
+  cursor:pointer;
+  border-radius:5px;
+}
+
+#history div:hover{
+  background:#334155;
+}
+#shiftBtn.active{
+  background:#475569;
 }

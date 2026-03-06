@@ -7,52 +7,81 @@
 <body>
 
 <div class="calculator">
+  
+  <!-- History panel -->
+  <div id="history"></div>
 
-<input type="text" id="display" value="0" disabled>
+  <!-- Display -->
+  <input type="text" id="display" disabled>
 
+  <!-- Buttons -->
   <div class="buttons">
 
     <!-- Row 1 -->
-    <button onclick="sin()">sin</button>
-    <button onclick="log()">log</button>
-    <button onclick="append(Math.PI)">π</button>
-       <button onclick="square()">x²</button>
+  <button id="sinBtn" onclick="sin()">sin</button>
+<button id="logBtn" onclick="log()">log</button>
+<button onclick="append(Math.PI)">π</button>
+<button id="squareBtn" onclick="square()">x²</button>
    
-        <button onclick="clearDisplay()">C</button>
+        <button class="operator" onclick="clearDisplay()">C</button>
+
+    <!-- Scientific functions row -->
+<button class="scientific" onclick="cos()">cos</button>
+<button class="scientific" onclick="tan()">tan</button>
+<button class="scientific" onclick="exp()">exp</button>
+<button class="scientific" onclick="factorial()">x!</button>
+<button class="scientific" onclick="ln()">ln</button>
+
+<button class="scientific" onclick="toDegree()">Deg</button>
+<button class="scientific" onclick="toRadian()">Rad</button> 
+<button class="scientific" id="degRadBtn" onclick="toggleDegRad()">Deg</button>
+<button class="scientific" onclick="percent()">%</button>
+<button class="scientific" onclick="inverse()">1/x</button>
+
+<button class="scientific" onclick="memoryAdd()">M+</button>
+<button class="scientific" onclick="memorySubtract()">M-</button>
+<button class="scientific" onclick="memoryRecall()">MR</button>
+<button class="scientific" onclick="memoryClear()">MC</button>
+<button class="scientific" onclick="cube()">x³</button>
+
 
 
     <!-- Row 2 -->
-    <button onclick="append('7')">7</button>
-    <button onclick="append('8')">8</button>
-    <button onclick="append('9')">9</button>
-     <button onclick="sqrt()">√</button>
-   <button onclick="backspace()">⌫</button>
+    <button class="number" onclick="append('7')">7</button>
+    <button class="number" onclick="append('8')">8</button>
+    <button class="number" onclick="append('9')">9</button>
+     <button class="scientific" onclick="sqrt()">√</button>
+   <button class="operator" onclick="backspace()">⌫</button>
 
 
     <!-- Row 3 -->
-    <button onclick="append('4')">4</button>
-    <button onclick="append('5')">5</button>
-    <button onclick="append('6')">6</button>
-    <button onclick="append('*')">*</button>
-       <button onclick="append('-')">-</button>
+    <button class="number" onclick="append('4')">4</button>
+    <button class="number" onclick="append('5')">5</button>
+    <button class="number" onclick="append('6')">6</button>
+    <button class="operator" onclick="append('*')">*</button>
+       <button class="operator" onclick="append('-')">-</button>
       
  
 
     <!-- Row 4 -->
-    <button onclick="append('1')">1</button>
-    <button onclick="append('2')">2</button>
-    <button onclick="append('3')">3</button>
-   <button onclick="append('/')">/</button>
- <button onclick="append('+')">+</button>
+    <button class="number" onclick="append('1')">1</button>
+    <button class="number" onclick="append('2')">2</button>
+    <button class="number" onclick="append('3')">3</button>
+   <button class="operator" onclick="append('/')">/</button>
+ <button class="operator" onclick="append('+')">+</button>
 
     <!-- Row 5 -->
-<button onclick="append('0')">0</button>
-<button onclick="append('.')">.</button>
-<button onclick="append('(')">(</button>
-<button onclick="append(')')">)</button>
-    <button onclick="calculate()">=</button>
+<button class="number" onclick="append('0')">0</button>
+<button class="number" onclick="append('.')">.</button>
+<button class="operator" onclick="append('(')">(</button>
+<button class="operator" onclick="append(')')">)</button>
+    <button class="operator" onclick="calculate()">=</button>
 
-
+<button id="copyBtn" onclick="copyResult()">Copy</button>
+<button id="themeToggle" onclick="toggleTheme()">Dark</button>
+<button id="shiftBtn" onclick="toggleShift()">Shift</button>
+<button onclick="append('**')">xʸ</button>
+<button onclick="toggleSign()">±</button>
 
   </div>
 </div>
